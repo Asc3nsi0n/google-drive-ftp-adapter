@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="description" content="Google-drive-ftp-adapter : Google Drive FTP Adapter to connect to google drive through the FTP protocol">
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Google-drive-ftp-adapter</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/andresoviedo/google-drive-ftp-adapter">View on GitHub</a>
+
+          <h1 id="project_title">Google-drive-ftp-adapter</h1>
+          <h2 id="project_tagline">Google Drive FTP Adapter to connect to google drive through the FTP protocol</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/andresoviedo/google-drive-ftp-adapter/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/andresoviedo/google-drive-ftp-adapter/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <p><img src="images/google-drive-logo.png" alt="alt tag"></p>
+
+<h1>
+<a id="news" class="anchor" href="#news" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>News</h1>
+
+<p><strong>Latest Release</strong> v1.2.3 - 07 April 2016</p>
+
+<ul>
+<li><a href="build/google-drive-ftp-adapter-win32-jre7-bundle.zip">adapter-bundle-jre7-win32.zip</a></li>
+</ul>
+
+<p><strong>New features</strong>:</p>
+
+<ul>
+<li>Control user connection limit (fixes issue #6)</li>
+<li>FTP configuration</li>
+</ul>
+
+<p><strong>Working on...</strong></p>
+
+<ul>
+<li>Updating the README.md &amp; logo - 09 September 2016</li>
+</ul>
+
+<h1>
+<a id="about" class="anchor" href="#about" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>About</h1>
+
+<ul>
+<li>With google-drive-ftp-adapter you can access your Google Drive through FTP protocols.</li>
+<li>You can use it in conjunction with any FTP client: shell FTP, Beyond Compare, FileZilla, etc.</li>
+</ul>
+
+<h1>
+<a id="features" class="anchor" href="#features" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Features</h1>
+
+<ul>
+<li>Standalone Java application</li>
+<li>Apache Mina FTP Server as a gateway to your google drive files</li>
+<li>Internal SQLite Cache for fast access to data</li>
+<li>Google Drive cache synchronisation by polling every 10 seconds</li>
+<li>Supported FTP commands:
+
+<ul>
+<li>List folders, subfolders and files</li>
+<li>Renaming files</li>
+<li>Make new directories</li>
+<li>Upload new files (includes gdoc conversion)</li>
+<li>Download files to local PC (includes gdoc and gsheet conversion)</li>
+<li>Touch remote timestamps</li>
+<li>Trash files or folders</li>
+</ul>
+</li>
+</ul>
+
+<p><strong>Ideas for the future</strong>:</p>
+
+<ul>
+<li>implement the apache commons-vfs interface <a href="https://commons.apache.org/proper/commons-vfs/">(Link)</a>
+</li>
+<li>implement linux cif vfs protocol <a href="http://www.ubiqx.org/cifs/Intro.html">(Link)</a>
+</li>
+</ul>
+
+<h1>
+<a id="screenshots" class="anchor" href="#screenshots" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Screenshots</h1>
+
+<p><img src="doc/images/screenshot-win32-start.jpg" alt="alt tag">
+<img src="doc/images/screenshot-beyond-compare.jpg" alt="alt tag">
+<img src="doc/images/screenshot-filezilla.png" alt="alt tag">
+<img src="doc/images/screenshot-shell-ftp.png" alt="alt tag">
+<img src="doc/images/screenshot-google-dialog.png" alt="alt tag">
+<img src="doc/images/screenshot-chrome.png" alt="alt tag"></p>
+
+<h1>
+<a id="notes" class="anchor" href="#notes" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Notes</h1>
+
+<ul>
+<li>The google-drive-ftp-adapter DOES NOT sync your files to / from Google Drive. If you want to sync your files,
+you should do it with your FTP tool.</li>
+<li>Google drive supports repeated filenames in same folder and illegal file names in contrast to many operating systems. 
+But don't worry because this is supported! These files will appear with chars encoded to _ (underscore) and an ID
+to keep track of the file. </li>
+</ul>
+
+<h1>
+<a id="source-code" class="anchor" href="#source-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Source Code</h1>
+
+<p><a href="https://github.com/andresoviedo/google-drive-ftp-adapter">GitHub</a></p>
+
+<h1>
+<a id="web-site" class="anchor" href="#web-site" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Web Site</h1>
+
+<p>(<a href="http://google-drive-ftp-adapter.andresoviedo.org">http://google-drive-ftp-adapter.andresoviedo.org</a>)</p>
+
+<h1>
+<a id="downloads" class="anchor" href="#downloads" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Downloads</h1>
+
+<p>Latest Release 1.2.3 - 07 April 2016</p>
+
+<ul>
+<li>Option 1 - /¡\ Java Required          : <a href="build/google-drive-ftp-adapter-jar-with-dependencies.jar">jar-with-dependencies.jar</a>
+</li>
+<li>Option 2 - /¡\ Java Required          : <a href="build/google-drive-ftp-adapter-bundle.zip">adapter-bundle.zip</a>
+</li>
+<li>Option 3 - Java for Windows included  : <a href="build/google-drive-ftp-adapter-win32-jre7-bundle.zip">adapter-bundle-jre7-win32.zip</a>
+</li>
+</ul>
+
+<h1>
+<a id="buid-it" class="anchor" href="#buid-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Buid It!</h1>
+
+<p>The project is packaged with Maven. If you want to build it just download the project, compile it and run Java with "org.andresoviedo.apps.gdrive_ftp_adapter.Main"</p>
+
+<h1>
+<a id="run-it" class="anchor" href="#run-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Run it!</h1>
+
+<ul>
+<li>
+<p>If you have Java installed already all you have to do is download jar-with-dependencies.jar and double click on it or run from command line:</p>
+
+<p>$ java -jar google-drive-ftp-adapter-jar-with-dependencies.jar</p>
+</li>
+<li>
+<p>If you don't have Java installed and you are in Windows:</p>
+
+<ul>
+<li>Download from <a href="build/google-drive-ftp-adapter-win32-jre7-bundle.zip">here</a>
+</li>
+<li>Unzip it</li>
+<li>Execute windows-install-java.cmd</li>
+<li>Execute start.cmd</li>
+</ul>
+</li>
+<li>Once the application is started, Google with request authorization through your browser to allow Google Drive FTP access to your data. Click "OK". </li>
+</ul>
+
+<h1>
+<a id="test-it" class="anchor" href="#test-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Test it!</h1>
+
+<ul>
+<li><p>Open ftp://user:user@localhost:1821/ in your browser to connect to your Google Drive.</p></li>
+<li><p>Or open terminal and type "ftp localhost 1821": Type "user" as the username and "user" as password. Once in FTP, type "dir" to see your drive files.</p></li>
+</ul>
+
+<p>Ftp example:</p>
+
+<pre><code>$ ftp localhost 1821
+Connected to localhost.
+220 Service ready for new user.
+Name (localhost:andres): user
+331 User name okay, need password for user.
+Password:
+230 User logged in, proceed.
+Remote system type is UNIX.
+$ ftp&gt; dir
+200 Command PORT okay.
+150 File status okay; about to open data connection.
+drwx------   0 uknown no_group            0 Nov 16  2013 SOFTWARE
+drwx------   0 uknown no_group            0 Oct 29  2013 NEXUS7
+drwx------   0 uknown no_group            0 Oct 19  2013 MUSIC
+-rw-------   0 uknown no_group      5348582 Apr 30 22:15 Dr. Toast - Light.mp3
+-rw-------   0 uknown no_group      1936326 Dec 21  2014 avatar2.jpg
+226 Closing data connection
+$ ftp&gt;
+</code></pre>
+
+<h1>
+<a id="application-configuration" class="anchor" href="#application-configuration" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Application Configuration</h1>
+
+<p>The application works fine without configuration. However, a default 'configuration.properties' file is provided
+in case you want to customize them.</p>
+
+<p>If you want, you can also customize the path of the 'configuration.properties' when launching the app:</p>
+
+<pre><code>$ java -jar google-drive-ftp-adapter.jar [propertiesFilename] 
+</code></pre>
+
+<p>Here are the application parameters you can customize:</p>
+
+<pre><code># log4j.fileId if you have more than 1 instance of the app running
+log4j.fileId=
+
+# account name associated to cache and Google credentials 
+account=default
+
+# FTP port listening for incoming connections
+port=1821
+
+# FTP Enable anonymous login?
+ftp.anonymous.enabled=false
+
+# FTP default user credentials
+ftp.user=user
+ftp.pass=user
+
+# Illegal characters for your file system so file copying works fine  
+os.illegalCharacters=\\/|[\\x00-\\x1F\\x7F]|\\`|\\?|\\*|\\\\|\\&lt;|\\&gt;|\\||\\"|\\:
+</code></pre>
+
+<p><strong>account</strong></p>
+
+<p>This is the name associated to the cache and Google credentials, so the next time you run the application you don't
+have to re-login or resynchronize all of the application cache. This is also the name of the subfolder under "/data"
+where information is going to be stored. Default value is "default".</p>
+
+<p><strong>port</strong></p>
+
+<p>TCP port number where the ftp adapter is going to listen for ftp clients. Default FTP port is 21, but In Linux 
+this is a reserved port and ports below 1024 are privileged, so we use port 1821. Default is 1821.
+There is another start2.cmd as example (Windows) that start an FTP adapter at port 22. </p>
+
+<ul>
+<li>Note: If you have different Google Drive accounts, you can launch multiple google-drive-ftp-adapter 
+in the same machine, each listening at a different port. Just put a different fileId so they write logs in different files.</li>
+</ul>
+
+<h1>
+<a id="faq" class="anchor" href="#faq" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>F.A.Q.</h1>
+
+<ul>
+<li>
+<p>Question: When I type in the username and password on the FTP client (e.g. in the FileZilla) it tells me "Authentication Failed":</p>
+
+<ul>
+<li>Answer: The user credentials to login to the ftp server are not the same user credentials that you use for loging into your google account.
+Check in the README.md for the default user credentials to use.</li>
+</ul>
+</li>
+<li>
+<p>Question: In my ftp client (e.g. FileZilla), when I download my google documents and I click on it they don't open.</p>
+
+<ul>
+<li>Answer: If they are documents like word or excel (either if it's google filetype or not), your filenames should end with a proper
+filename extesion like "my_document.doc" or "my_google_sheet.xls" so your operating system can open it with your deafult installed applications.</li>
+</ul>
+</li>
+<li>
+<p>Question: How can I start a secondary server?</p>
+
+<ul>
+<li>Answer: You have 2 options so far:
+
+<ul>
+<li>in the start2.cmd you have an example how to launch a secondary server passing an accountId and secondary port number. 
+You may have different start.cmd to start different ftp servers (i.e. start-foo.cmd, start-bar.cmd).</li>
+<li>Or instead of passing the accounId and port number, you can pass a /path/to/secondary.properties 
+That way you can specify different account ids and ports inside the file. </li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Question: When I launch the application nothing happens.</p>
+
+<ul>
+<li>Answer:  Check that in the console or file log there is no errors. Check that your default Internet browser doesn't have any plugin
+that is causing the google authentication dialog to have any problems.<br>
+</li>
+</ul>
+</li>
+</ul>
+
+<h1>
+<a id="known-issues" class="anchor" href="#known-issues" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Known Issues</h1>
+
+<ul>
+<li><p>If you are in Windows 10 and you an error like the following, try to run program or terminal as administrator: 
+java.lang.UnsatisfiedLinkError: C:\Users\Zeo\AppData\Local\Temp\sqlite-3.7.151-x86-sqlitejdbc.dll: Access is denied</p></li>
+<li><p>For some type of files, the size of files reported by Google differs from what the local operating system does (for example: .txt and .3gp) (Fix TBA)</p></li>
+<li>If you have timeout problems because of slow internet connectivity, try incrementing the timeout in your FTP client.</li>
+</ul>
+
+<h1>
+<a id="disclaimer" class="anchor" href="#disclaimer" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Disclaimer</h1>
+
+<ul>
+<li>This application is released under the LGPL license. Use this application at your own risk.</li>
+<li>This application uses a Google Drive API Key with a courtesy of 10 requests/second/user and 10 million
+request/day. When it reaches the quota the application may stop working.</li>
+</ul>
+
+<h1>
+<a id="project-info" class="anchor" href="#project-info" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Project Info</h1>
+
+<p>This application lets you connect your FTP applications to your Google Drive files through the FTP protocol 
+rather than using the official Google Drive client.</p>
+
+<p>This custom Google Drive client was created because the official client can't be reinstalled on a new PC without 
+having to download all your drive files again. Also, because the official client does not support FAT32
+partitions and I used to have all my files in one of this partitions.</p>
+
+<p>So this application basically starts a FTP server in your local machine emulating that it is hosting your 
+Google Drive files, acting as a gateway. Once this setup is done, you can connect any FTP client to connect 
+to your Google Drive files. I use it in conjunction with Beyond Compare to compare my local files 
+(stored anywhere in my cloud ;) and compare them to ones I have in the Google Drive cloud.</p>
+
+<p>You are free to use this program while you keep this file and the authoring comments in the code. Any comments 
+and suggestions are welcome.</p>
+
+<h1>
+<a id="contact-information" class="anchor" href="#contact-information" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Contact Information</h1>
+
+<p><a href="http://www.andresoviedo.org">Contact</a></p>
+
+<h1>
+<a id="change-log" class="anchor" href="#change-log" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Change Log</h1>
+
+<p>(f) fixed, (i) improved, (n) new feature</p>
+
+<ul>
+<li>v1.2.3 (07/04/2016)
+
+<ul>
+<li>(f) Controlling of google drive service user rate limit. Set to 5/req/user/sec Fixes issue #6</li>
+<li>(f) Fixed bug when receiving CWD command we were removing first character of folder</li>
+</ul>
+</li>
+<li>v1.2.2 (27/10/2015)
+
+<ul>
+<li>(f) fixes a issue with Windows (8.1) Explorer FTP, which sends CWD commands with trailing path separator</li>
+<li>(f) decoding an encoded filename did result in a different name on Windows as filename was made lower case, so use the lower case name just internally.</li>
+</ul>
+</li>
+<li>v1.2.1 (12/12/2015)
+
+<ul>
+<li>(n) "Hack" to force cache to refetch folder info (refresh folder or type "dir" 3 times in ftp) </li>
+<li>(i) Updated to latest version 1.20.0 of google-api-services-drive.jar</li>
+<li>(f) Removed not used permissions for the google authorization. Now only DRIVE &amp; DRIVE_METADATA used</li>
+</ul>
+</li>
+<li>v1.2.0 (10/10/2015)
+
+<ul>
+<li>(n) support for assembly application into jar-with-dependencies.jar</li>
+<li>(n) support for configuration.properties</li>
+<li>(n) new properties can be configured like "ftp.user", "ftp.pass" "os.illegalCharacters"</li>
+</ul>
+</li>
+<li>v1.1.0 (09/10/2015)
+
+<ul>
+<li>(i) Complete refactoring to simplify design and to allow adding more features<br>
+</li>
+<li>(f) Illegal filename handling</li>
+<li>(f) Fixed several issues. Tested with Beyond Compare, FileZilla &amp; Telnet</li>
+</ul>
+</li>
+<li>v1.0.1
+
+<ul>
+<li>(f) Changed google drive updater task from 10 minute to 10 seconds polling </li>
+</ul>
+</li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Google-drive-ftp-adapter maintained by <a href="https://github.com/andresoviedo">andresoviedo</a></p>
+        <p>Published with <a href="https://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
